@@ -15,21 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Yunni\Core.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Application.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\EntryPoint.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Yunni\Application.cpp">
+    <ClCompile Include="src\SandBoxApp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
