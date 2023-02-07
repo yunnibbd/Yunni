@@ -1,0 +1,3 @@
+[submodule "Yunni/vendor/spdlog"]
+	path = Yunni/vendor/spdlog
+	url = https://github.com/gabime/spdlog
