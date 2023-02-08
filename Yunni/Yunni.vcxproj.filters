@@ -4,6 +4,9 @@
     <Filter Include="Yunni">
       <UniqueIdentifier>{D88F8B0E-44A4-B3BF-0D26-571F79F9AFF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Yunni\Events">
+      <UniqueIdentifier>{BCF815CD-A85B-A571-51E1-DD273D2371F4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Yunni.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\EntryPoint.h">
       <Filter>Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Events\ApplicationEvent.h">
+      <Filter>Yunni\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Events\Event.h">
+      <Filter>Yunni\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Events\KeyEvent.h">
+      <Filter>Yunni\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Events\MouseEvent.h">
+      <Filter>Yunni\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Log.h">
       <Filter>Yunni</Filter>
