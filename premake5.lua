@@ -10,6 +10,12 @@ workspace "Yunni"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories reletive to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Yunni/vendor/GLFW/include"
+
+include "Yunni/vendor/GLFW"
+
 project "Yunni"
 	location "Yunni"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Yunni"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "ynpch.h"
+	pchsource "Yunni/src/ynpch.cpp"
 
 	files
 	{
@@ -27,7 +36,14 @@ project "Yunni"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
 	}
 
 	filter "system:windows"

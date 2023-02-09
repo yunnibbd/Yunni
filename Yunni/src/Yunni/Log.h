@@ -1,8 +1,12 @@
 #pragma once
 
-#include <memory.h>
 #include "Core.h"
-#include "spdlog/spdlog.h"
+
+// This ignores all warnings raised inside External headers
+#pragma warning(push, 0)
+#include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
+#pragma warning(pop)
 
 namespace Yunni {
 
@@ -17,7 +21,6 @@ namespace Yunni {
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;
 	};
-
 }
 
 //Core log macros

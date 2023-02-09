@@ -3,9 +3,6 @@
 #include "Yunni/Core.h"
 #include "spdlog/fmt/ostr.h"
 
-#include <string>
-#include <functional>
-
 namespace Yunni {
 
 	// Events in Yunni are currently blocking, meaning when an event occurs it

@@ -7,6 +7,12 @@
     <Filter Include="Yunni\Events">
       <UniqueIdentifier>{BCF815CD-A85B-A571-51E1-DD273D2371F4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Yunni\Platform">
+      <UniqueIdentifier>{2C1F9586-18ED-888C-0181-F9B2EDED64F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Yunni\Platform\Windows">
+      <UniqueIdentifier>{6635B5E8-522F-DE3A-3B9C-744B273544A7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Yunni.h" />
@@ -34,6 +40,13 @@
     <ClInclude Include="src\Yunni\Log.h">
       <Filter>Yunni</Filter>
     </ClInclude>
+    <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h">
+      <Filter>Yunni\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Window.h">
+      <Filter>Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ynpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
@@ -42,5 +55,9 @@
     <ClCompile Include="src\Yunni\Log.cpp">
       <Filter>Yunni</Filter>
     </ClCompile>
+    <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Yunni\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ynpch.cpp" />
   </ItemGroup>
 </Project>

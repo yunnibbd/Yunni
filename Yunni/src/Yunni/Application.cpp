@@ -1,3 +1,4 @@
+#include "ynpch.h"
 #include "Application.h"
 #include "Yunni/Log.h"
 #include "Yunni/Events/ApplicationEvent.h"
@@ -6,7 +7,7 @@ namespace Yunni {
 
 	Application::Application()
 	{
-
+		//m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -16,17 +17,9 @@ namespace Yunni {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			YN_TRACE(e);
+			//m_Window->OnUpdate();
 		}
-
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			YN_TRACE(e);
-		}
-
-		while (true);
 	}
 }
