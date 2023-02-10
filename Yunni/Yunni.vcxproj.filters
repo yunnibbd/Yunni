@@ -37,6 +37,12 @@
     <ClInclude Include="src\Yunni\Events\MouseEvent.h">
       <Filter>Yunni\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Yunni\Layer.h">
+      <Filter>Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\LayerStack.h">
+      <Filter>Yunni</Filter>
+    </ClInclude>
     <ClInclude Include="src\Yunni\Log.h">
       <Filter>Yunni</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
+      <Filter>Yunni</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Layer.cpp">
+      <Filter>Yunni</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\LayerStack.cpp">
       <Filter>Yunni</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Log.cpp">

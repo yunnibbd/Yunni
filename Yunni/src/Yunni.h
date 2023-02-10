@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include "Yunni/Application.h"
+#include "Yunni/Layer.h"
 #include "Yunni/Log.h"
 
 //---Entry Point----------------------------

@@ -85,6 +85,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -110,6 +111,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -136,6 +138,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,6 +161,8 @@
     <ClInclude Include="src\Yunni\Events\Event.h" />
     <ClInclude Include="src\Yunni\Events\KeyEvent.h" />
     <ClInclude Include="src\Yunni\Events\MouseEvent.h" />
+    <ClInclude Include="src\Yunni\Layer.h" />
+    <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni\Window.h" />
@@ -165,6 +170,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp" />
+    <ClCompile Include="src\Yunni\Layer.cpp" />
+    <ClCompile Include="src\Yunni\LayerStack.cpp" />
     <ClCompile Include="src\Yunni\Log.cpp" />
     <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ynpch.cpp">
