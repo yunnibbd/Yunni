@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories reletive to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Yunni/vendor/GLFW/include"
+IncludeDir["Glad"] = "Yunni/vendor/Glad/include"
 
 include "Yunni/vendor/GLFW"
+include "Yunni/vendor/Glad"
 
 project "Yunni"
 	location "Yunni"
@@ -37,12 +39,14 @@ project "Yunni"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 	}
 
@@ -54,7 +58,8 @@ project "Yunni"
 		defines
 		{
 			"YUNNI_BUILD_DLL",
-			"YN_PLATFORM_WINDOWS"
+			"YN_PLATFORM_WINDOWS",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
