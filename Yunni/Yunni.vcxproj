@@ -81,7 +81,7 @@
       <PrecompiledHeaderFile>ynpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>YUNNI_BUILD_DLL;YN_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;YN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -104,7 +104,7 @@
       <PrecompiledHeaderFile>ynpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>YUNNI_BUILD_DLL;YN_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;YN_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -131,7 +131,7 @@
       <PrecompiledHeaderFile>ynpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>YUNNI_BUILD_DLL;YN_PLATFORM_WINDOWS;GLFW_INCLUDE_NONE;YN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -161,18 +161,22 @@
     <ClInclude Include="src\Yunni\Events\Event.h" />
     <ClInclude Include="src\Yunni\Events\KeyEvent.h" />
     <ClInclude Include="src\Yunni\Events\MouseEvent.h" />
+    <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Yunni\Layer.h" />
     <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
+    <ClInclude Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp" />
+    <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Yunni\Layer.cpp" />
     <ClCompile Include="src\Yunni\LayerStack.cpp" />
     <ClCompile Include="src\Yunni\Log.cpp" />
+    <ClCompile Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ynpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -184,6 +188,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

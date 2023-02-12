@@ -7,8 +7,14 @@
     <Filter Include="Yunni\Events">
       <UniqueIdentifier>{BCF815CD-A85B-A571-51E1-DD273D2371F4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Yunni\ImGui">
+      <UniqueIdentifier>{0287E6B8-6E3C-5FAE-F730-598563E555B2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Yunni\Platform">
       <UniqueIdentifier>{2C1F9586-18ED-888C-0181-F9B2EDED64F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Yunni\Platform\Opengl">
+      <UniqueIdentifier>{20836923-8CEF-241E-55E3-BC7BC10E4786}</UniqueIdentifier>
     </Filter>
     <Filter Include="Yunni\Platform\Windows">
       <UniqueIdentifier>{6635B5E8-522F-DE3A-3B9C-744B273544A7}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Yunni\Events\MouseEvent.h">
       <Filter>Yunni\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h">
+      <Filter>Yunni\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Yunni\Layer.h">
       <Filter>Yunni</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\Log.h">
       <Filter>Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.h">
+      <Filter>Yunni\Platform\Opengl</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h">
       <Filter>Yunni\Platform\Windows</Filter>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Yunni\Application.cpp">
       <Filter>Yunni</Filter>
     </ClCompile>
+    <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp">
+      <Filter>Yunni\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Yunni\Layer.cpp">
       <Filter>Yunni</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Yunni\Log.cpp">
       <Filter>Yunni</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.cpp">
+      <Filter>Yunni\Platform\Opengl</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp">
       <Filter>Yunni\Platform\Windows</Filter>
