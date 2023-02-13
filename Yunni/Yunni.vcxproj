@@ -159,10 +159,12 @@
     <ClInclude Include="src\Yunni\Events\KeyEvent.h" />
     <ClInclude Include="src\Yunni\Events\MouseEvent.h" />
     <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Yunni\Input.h" />
     <ClInclude Include="src\Yunni\Layer.h" />
     <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
     <ClInclude Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
@@ -174,6 +176,7 @@
     <ClCompile Include="src\Yunni\LayerStack.cpp" />
     <ClCompile Include="src\Yunni\Log.cpp" />
     <ClCompile Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Yunni\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ynpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

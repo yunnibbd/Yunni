@@ -65,6 +65,8 @@
       <Filter>Yunni</Filter>
     </ClInclude>
     <ClInclude Include="src\ynpch.h" />
+    <ClInclude Include="src\Yunni\Input.h" />
+    <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
@@ -89,5 +91,6 @@
       <Filter>Yunni\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ynpch.cpp" />
+    <ClCompile Include="src\Yunni\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
