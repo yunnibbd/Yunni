@@ -67,6 +67,8 @@
     <ClInclude Include="src\ynpch.h" />
     <ClInclude Include="src\Yunni\Input.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Yunni\KeyCodes.h" />
+    <ClInclude Include="src\Yunni\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">

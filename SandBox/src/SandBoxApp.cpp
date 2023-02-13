@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		YN_INFO("ExampleLayer::Update");
+		if (Yunni::Input::IsKeyPressed(YN_KEY_TAB))
+			YN_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(Yunni::Event& event) override
 	{
-		YN_TRACE("{0}", event);
+		if (event.GetEventType() == Yunni::EventType::KeyPressed)
+		{
+			Yunni::KeyPressedEvent& e = (Yunni::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == YN_KEY_TAB)
+				YN_TRACE("Tab key is pressed (event)!");
+			YN_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

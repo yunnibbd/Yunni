@@ -160,9 +160,11 @@
     <ClInclude Include="src\Yunni\Events\MouseEvent.h" />
     <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Yunni\Input.h" />
+    <ClInclude Include="src\Yunni\KeyCodes.h" />
     <ClInclude Include="src\Yunni\Layer.h" />
     <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
+    <ClInclude Include="src\Yunni\MouseButtonCodes.h" />
     <ClInclude Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h" />
