@@ -1,5 +1,6 @@
 workspace "Yunni"
 	architecture "x64"
+	startproject "Sandbox"
 	
 	configurations
 	{
@@ -23,9 +24,9 @@ include "Yunni/vendor/imgui"
 
 project "Yunni"
 	location "Yunni"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
-	staticruntime "off"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -94,7 +95,7 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
-	staticruntime "off"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -109,6 +110,7 @@ project "Sandbox"
 	{
 		"Yunni/vendor/spdlog/include",
 		"Yunni/src",
+		"Yunni/vendor",
 		"%{IncludeDir.glm}"
 	}
 

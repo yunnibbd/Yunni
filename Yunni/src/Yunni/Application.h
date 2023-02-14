@@ -6,6 +6,8 @@
 #include "Yunni/Events/Event.h"
 #include "Yunni/Events/ApplicationEvent.h"
 
+#include "Yunni/ImGui/ImGuiLayer.h"
+
 namespace Yunni {
 	class YUNNI_API Application
 	{
@@ -27,6 +29,7 @@ namespace Yunni {
 		bool OnWindoClose(WindowCloseEvent& event);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

@@ -16,9 +16,6 @@
     <Filter Include="src\Yunni\Platform">
       <UniqueIdentifier>{633F79E4-4F23-3A3A-B883-348DA48624BC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Yunni\Platform\Opengl">
-      <UniqueIdentifier>{775F8E75-E321-C2FF-2CD2-508C98D39ADD}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Yunni\Platform\Windows">
       <UniqueIdentifier>{9D9C757F-89AC-2150-F265-866EDE9410E9}</UniqueIdentifier>
     </Filter>
@@ -89,9 +86,6 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\MouseButtonCodes.h">
       <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.h">
-      <Filter>src\Yunni\Platform\Opengl</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h">
       <Filter>src\Yunni\Platform\Windows</Filter>
@@ -1358,6 +1352,9 @@
     <ClCompile Include="src\Yunni\Application.cpp">
       <Filter>src\Yunni</Filter>
     </ClCompile>
+    <ClCompile Include="src\Yunni\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Yunni\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp">
       <Filter>src\Yunni\ImGui</Filter>
     </ClCompile>
@@ -1369,9 +1366,6 @@
     </ClCompile>
     <ClCompile Include="src\Yunni\Log.cpp">
       <Filter>src\Yunni</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Yunni\Platform\Opengl\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Yunni\Platform\Opengl</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Yunni\Platform\Windows</Filter>

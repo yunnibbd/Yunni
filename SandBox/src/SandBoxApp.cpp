@@ -1,5 +1,7 @@
 #include <Yunni.h>
 
+#include "ImGui/imgui.h"
+
 class ExampleLayer : public Yunni::Layer
 {
 public:
@@ -12,6 +14,13 @@ public:
 	{
 		if (Yunni::Input::IsKeyPressed(YN_KEY_TAB))
 			YN_TRACE("Tab key is pressed (poll)!");
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello world");
+		ImGui::End();
 	}
 
 	void OnEvent(Yunni::Event& event) override
@@ -32,7 +41,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Yunni::ImGuiLayer());
 	}
 
 	~Sandbox()
