@@ -1,12 +1,15 @@
 #pragma once
 
 #ifdef YN_PLATFORM_WINDOWS
+#if YN_DYNAMIC_LINK
 	#ifdef YUNNI_BUILD_DLL
 		#define YUNNI_API __declspec(dllexport)
 	#else
-		//#define YUNNI_API __declspec(dllimport)
-		#define YUNNI_API
+		#define YUNNI_API __declspec(dllimport)
 	#endif
+#else
+	#define YUNNI_API
+#endif
 #else
 	#error Yunni only supports Windows!
 #endif
