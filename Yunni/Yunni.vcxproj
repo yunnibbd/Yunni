@@ -156,8 +156,10 @@
     <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
     <ClInclude Include="src\Yunni\MouseButtonCodes.h" />
-    <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -584,8 +586,9 @@
     <ClCompile Include="src\Yunni\Layer.cpp" />
     <ClCompile Include="src\Yunni\LayerStack.cpp" />
     <ClCompile Include="src\Yunni\Log.cpp" />
-    <ClCompile Include="src\Yunni\Platform\Windows\WindowsInput.cpp" />
-    <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ynpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

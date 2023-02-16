@@ -87,12 +87,6 @@
     <ClInclude Include="src\Yunni\MouseButtonCodes.h">
       <Filter>src\Yunni</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\Platform\Windows\WindowsInput.h">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Platform\Windows\WindowsWindow.h">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\Yunni\Window.h">
       <Filter>src\Yunni</Filter>
     </ClInclude>
@@ -1347,6 +1341,14 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>src\Yunni\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Yunni\Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
@@ -1367,14 +1369,15 @@
     <ClCompile Include="src\Yunni\Log.cpp">
       <Filter>src\Yunni</Filter>
     </ClCompile>
-    <ClCompile Include="src\Yunni\Platform\Windows\WindowsInput.cpp">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Yunni\Platform\Windows\WindowsWindow.cpp">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\ynpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Yunni\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Yunni\Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
