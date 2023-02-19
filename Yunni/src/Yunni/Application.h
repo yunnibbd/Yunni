@@ -7,6 +7,7 @@
 #include "Yunni/Events/ApplicationEvent.h"
 
 #include "Yunni/ImGui/ImGuiLayer.h"
+#include "Yunni/Renderer/Shader.h"
 
 namespace Yunni {
 	class YUNNI_API Application
@@ -34,6 +35,7 @@ namespace Yunni {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	private:
 		static Application* s_Instance;
 	};

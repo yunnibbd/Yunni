@@ -160,6 +160,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Yunni\Renderer\Shader.h" />
     <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -592,6 +593,7 @@
     <ClCompile Include="src\ynpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
