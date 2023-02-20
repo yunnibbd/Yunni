@@ -1350,6 +1350,9 @@
       <Filter>src\Yunni\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Renderer\Shader.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
+    <ClInclude Include="src\Yunni\Renderer\Buffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
@@ -1381,5 +1384,8 @@
       <Filter>src\Yunni\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
   </ItemGroup>
 </Project>
