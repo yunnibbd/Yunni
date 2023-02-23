@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Yunni.h" />
     <ClInclude Include="src\Yunni\Application.h" />
     <ClInclude Include="src\Yunni\Core.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
     <ClInclude Include="src\Yunni\Renderer\Shader.h" />
+    <ClInclude Include="src\Yunni\Renderer\VertexArray.h" />
     <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -585,6 +587,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Yunni\Application.cpp" />
     <ClCompile Include="src\Yunni\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp" />
@@ -600,6 +603,7 @@
     <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
