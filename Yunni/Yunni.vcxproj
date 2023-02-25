@@ -164,6 +164,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni\Renderer\Buffer.h" />
     <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererCommand.h" />
@@ -605,6 +606,7 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererCommand.cpp" />

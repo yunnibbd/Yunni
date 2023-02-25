@@ -7,9 +7,11 @@
 #include "Yunni/Events/ApplicationEvent.h"
 
 #include "Yunni/ImGui/ImGuiLayer.h"
+
 #include "Yunni/Renderer/Shader.h"
 #include "Yunni/Renderer/Buffer.h"
 #include "Yunni/Renderer/VertexArray.h"
+#include "Yunni/Renderer/OrthographicCamera.h"
 
 namespace Yunni {
 	class YUNNI_API Application
@@ -41,6 +43,8 @@ namespace Yunni {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
