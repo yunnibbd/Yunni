@@ -147,6 +147,7 @@
     <ClInclude Include="src\Yunni.h" />
     <ClInclude Include="src\Yunni\Application.h" />
     <ClInclude Include="src\Yunni\Core.h" />
+    <ClInclude Include="src\Yunni\Core\Timestep.h" />
     <ClInclude Include="src\Yunni\EntryPoint.h" />
     <ClInclude Include="src\Yunni\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Yunni\Events\Event.h" />

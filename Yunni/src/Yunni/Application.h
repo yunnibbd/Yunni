@@ -8,6 +8,8 @@
 
 #include "Yunni/ImGui/ImGuiLayer.h"
 
+#include "Yunni/Core/Timestep.h"
+
 namespace Yunni {
 	class Application
 	{
@@ -27,11 +29,12 @@ namespace Yunni {
 		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindoClose(WindowCloseEvent& event);
-
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};

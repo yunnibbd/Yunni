@@ -1359,6 +1359,7 @@
     <ClInclude Include="src\Yunni\Renderer\RendererCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Yunni\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Yunni\Application.cpp">
