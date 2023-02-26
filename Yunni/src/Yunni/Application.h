@@ -8,13 +8,8 @@
 
 #include "Yunni/ImGui/ImGuiLayer.h"
 
-#include "Yunni/Renderer/Shader.h"
-#include "Yunni/Renderer/Buffer.h"
-#include "Yunni/Renderer/VertexArray.h"
-#include "Yunni/Renderer/OrthographicCamera.h"
-
 namespace Yunni {
-	class YUNNI_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -37,14 +32,6 @@ namespace Yunni {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
