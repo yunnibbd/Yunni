@@ -21,7 +21,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Yunni::VertexBuffer> vertexBuffer;
+		Yunni::Ref<Yunni::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Yunni::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Yunni::BufferLayout layout = {
@@ -34,7 +34,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Yunni::IndexBuffer> indexBuffer;
+		Yunni::Ref<Yunni::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Yunni::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 
 		m_VertexArray->SetIndexBuffer(indexBuffer);
@@ -48,7 +48,7 @@ public:
 			-0.5f,  0.5f, 0.0f,
 		};
 
-		std::shared_ptr<Yunni::VertexBuffer> squareVB;
+		Yunni::Ref<Yunni::VertexBuffer> squareVB;
 		squareVB.reset(Yunni::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Yunni::ShaderDataType::Float3, "a_Position" }
@@ -56,7 +56,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Yunni::IndexBuffer> squareIB;
+		Yunni::Ref<Yunni::IndexBuffer> squareIB;
 		squareIB.reset(Yunni::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -191,11 +191,11 @@ public:
 	}
 
 private:
-	std::shared_ptr<Yunni::Shader> m_Shader;
-	std::shared_ptr<Yunni::VertexArray> m_VertexArray;
+	Yunni::Ref<Yunni::Shader> m_Shader;
+	Yunni::Ref<Yunni::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Yunni::Shader> m_FlatColorShader;
-	std::shared_ptr<Yunni::VertexArray> m_SquareVA;
+	Yunni::Ref<Yunni::Shader> m_FlatColorShader;
+	Yunni::Ref<Yunni::VertexArray> m_SquareVA;
 
 	Yunni::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;

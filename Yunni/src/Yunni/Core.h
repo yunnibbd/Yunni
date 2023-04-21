@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #ifdef YN_PLATFORM_WINDOWS
 #if YN_DYNAMIC_LINK
 	#ifdef YUNNI_BUILD_DLL
@@ -29,3 +31,13 @@
 #define BIT(x) (1 << x)
 
 #define YN_BIND_EVENT_FUNC(fn) std::bind(&fn, this, std::placeholders::_1)
+
+namespace Yunni {
+	template<typename T>
+	using Scope = std::unique_ptr<T>;
+
+
+	template <typename T>
+	using Ref = std::shared_ptr<T>;
+
+}

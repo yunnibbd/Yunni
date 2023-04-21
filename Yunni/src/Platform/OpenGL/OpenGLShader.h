@@ -10,8 +10,8 @@ namespace Yunni {
 		OpenGLShader(const std::string& vertexSrc, const std::string& fragmentSrc);
 		virtual ~OpenGLShader();
 
-		virtual void Bind() const;
-		virtual void Unbind() const;
+		void Bind() const override;
+		void Unbind() const override;
 
 		void UploadUniformInt(const std::string& name, int values);
 
@@ -26,4 +26,3 @@ namespace Yunni {
 		uint32_t m_RendererID;
 	};
 }
-
