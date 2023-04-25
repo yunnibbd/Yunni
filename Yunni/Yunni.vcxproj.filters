@@ -4,8 +4,20 @@
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Yunni">
       <UniqueIdentifier>{2F9E48B4-9B08-FD2A-E446-AED050F0DA7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Yunni\Core">
+      <UniqueIdentifier>{E7F776A1-D3C5-6AA7-BC59-DBCDA8C6460C}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Yunni\Events">
       <UniqueIdentifier>{339F36E0-1F98-5532-48CA-3AB73422353E}</UniqueIdentifier>
@@ -13,11 +25,8 @@
     <Filter Include="src\Yunni\ImGui">
       <UniqueIdentifier>{99BAC0D0-0546-2E95-0E57-B1897A618A95}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Yunni\Platform">
-      <UniqueIdentifier>{633F79E4-4F23-3A3A-B883-348DA48624BC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Yunni\Platform\Windows">
-      <UniqueIdentifier>{9D9C757F-89AC-2150-F265-866EDE9410E9}</UniqueIdentifier>
+    <Filter Include="src\Yunni\Renderer">
+      <UniqueIdentifier>{B54656BF-A12A-1715-0A8B-1168F68D0197}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -40,8 +49,35 @@
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\stb_image">
+      <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Yunni.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -50,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\Core.h">
       <Filter>src\Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\Timestep.h">
+      <Filter>src\Yunni\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\EntryPoint.h">
       <Filter>src\Yunni</Filter>
@@ -86,6 +125,33 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\MouseButtonCodes.h">
       <Filter>src\Yunni</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\Buffer.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\Renderer.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\RendererAPI.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\RendererCommand.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\Shader.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\Texture.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\VertexArray.h">
+      <Filter>src\Yunni\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Window.h">
       <Filter>src\Yunni</Filter>
@@ -1341,28 +1407,35 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
-      <Filter>src\Yunni\Platform\Windows</Filter>
+    <ClInclude Include="vendor\stb_image\stb_image.h">
+      <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Renderer\Shader.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
-    <ClInclude Include="src\Yunni\Renderer\Buffer.h" />
-    <ClInclude Include="src\Yunni\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Yunni\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\Yunni\Renderer\RendererCommand.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
-    <ClInclude Include="src\Yunni\Core\Timestep.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Yunni\Application.cpp">
       <Filter>src\Yunni</Filter>
     </ClCompile>
@@ -1381,26 +1454,35 @@
     <ClCompile Include="src\Yunni\Log.cpp">
       <Filter>src\Yunni</Filter>
     </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\Buffer.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\Renderer.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\RendererAPI.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\RendererCommand.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\Shader.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\Texture.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\VertexArray.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\ynpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
-      <Filter>src\Yunni\Platform\Windows</Filter>
+    <ClCompile Include="vendor\stb_image\stb_image.cpp">
+      <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>src\Yunni\Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Yunni\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\RendererAPI.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\RendererCommand.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>

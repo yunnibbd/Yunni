@@ -20,6 +20,7 @@
 
 #include "Yunni/Renderer/Buffer.h"
 #include "Yunni/Renderer/Shader.h"
+#include "Yunni/Renderer/Texture.h"
 #include "Yunni/Renderer/VertexArray.h"
 
 #include "Yunni/Renderer/OrthographicCamera.h"

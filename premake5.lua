@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Yunni/vendor/GLFW/include"
 IncludeDir["Glad"] = "Yunni/vendor/Glad/include"
 IncludeDir["ImGui"] = "Yunni/vendor/imgui"
 IncludeDir["glm"] = "Yunni/vendor/glm"
+IncludeDir["stb_image"] = "Yunni/vendor/stb_image "
 
 include "Yunni/vendor/GLFW"
 include "Yunni/vendor/Glad"
@@ -38,6 +39,8 @@ project "Yunni"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
@@ -54,7 +57,8 @@ project "Yunni"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links

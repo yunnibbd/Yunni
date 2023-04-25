@@ -41,17 +41,18 @@ public:
 
 		m_SquareVA.reset(Yunni::VertexArray::Create());
 
-		float squareVertices[3 * 4] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.5f,  0.5f, 0.0f,
-			-0.5f,  0.5f, 0.0f,
+		float squareVertices[5 * 4] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
 		Yunni::Ref<Yunni::VertexBuffer> squareVB;
 		squareVB.reset(Yunni::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
-			{ Yunni::ShaderDataType::Float3, "a_Position" }
+			{ Yunni::ShaderDataType::Float3, "a_Position" },
+			{ Yunni::ShaderDataType::Float2, "a_TexCoord" }
 		});
 		m_SquareVA->AddVertexBuffer(squareVB);
 
@@ -97,38 +98,44 @@ public:
 
 		m_Shader.reset(Yunni::Shader::Create(vertexSource, fragmentSource));
 
-		std::string flatShaderVertexSource = R"(
+		std::string textureShaderVertexSource = R"(
 			#version 330 core
 
-			layout(location = 0) in vec3 a_Position;			
+			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec2 a_TexCoord;			
 
 			uniform mat4 u_ViewProjection;
 			uniform mat4 u_Transform;
 
-			out vec3 v_Position;
+			out vec2 v_TexCoord;
 
 			void main()
 			{
-				v_Position = a_Position;
+				v_TexCoord = a_TexCoord;
 				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
 			}
 		)";
 
-		std::string flatShaderFragmentSource = R"(
+		std::string textureShaderFragmentSource = R"(
 			#version 330 core
 
 			layout(location = 0) out vec4 color;			
 
-			in vec3 v_Position;
-			uniform vec3 u_Color;
+			in vec2 v_TexCoord;
+			uniform sampler2D u_Texture;
 
 			void main()
 			{
-				color = vec4(u_Color, 1.0);
+				color = texture(u_Texture, v_TexCoord);
 			}
 		)";
 
-		m_FlatColorShader.reset(Yunni::Shader::Create(flatShaderVertexSource, flatShaderFragmentSource));
+		m_TextureShader.reset(Yunni::Shader::Create(textureShaderVertexSource, textureShaderFragmentSource));
+
+		m_Texture = Yunni::Texture2D::Create("F:/images/assets/mps.png");
+
+		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_TextureShader)->Bind();
+		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Yunni::Timestep ts) override
@@ -159,22 +166,23 @@ public:
 
 		Yunni::Renderer::BeginScene(m_Camera);
 
-		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+		// glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+		//
+		// for (int y = 0; y < 20; ++y) 
+		// {
+		// 	for (int x = 0; x < 20; ++x) 
+		// 	{
+		// 		glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+		// 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
+		// 		Yunni::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
+		// 	}
+		// }
 
-		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_FlatColorShader)->Bind();
-		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SqareColor);
+		m_Texture->Bind();
+		Yunni::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
-		for (int y = 0; y < 20; ++y) 
-		{
-			for (int x = 0; x < 20; ++x) 
-			{
-				glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
-				glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-				Yunni::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
-			}
-		}
-		
-		Yunni::Renderer::Submit(m_Shader, m_VertexArray);
+		//Triangle
+		//Yunni::Renderer::Submit(m_Shader, m_VertexArray);
 
 		Yunni::Renderer::EndScene();
 	}
@@ -191,11 +199,13 @@ public:
 	}
 
 private:
-	Yunni::Ref<Yunni::Shader> m_Shader;
+	Yunni::Ref<Yunni::Shader> m_Shader, m_TextureShader;
 	Yunni::Ref<Yunni::VertexArray> m_VertexArray;
 
 	Yunni::Ref<Yunni::Shader> m_FlatColorShader;
 	Yunni::Ref<Yunni::VertexArray> m_SquareVA;
+
+	Yunni::Ref<Yunni::Texture2D> m_Texture;
 
 	Yunni::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
