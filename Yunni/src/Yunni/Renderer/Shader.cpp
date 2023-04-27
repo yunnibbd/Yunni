@@ -5,6 +5,18 @@
 #include "Platform/OpenGL/OpenGLShader.h"
 
 namespace Yunni {
+	Shader* Shader::Create(const std::string& path)
+	{
+		switch (Renderer::GetAPI())
+		{
+		case RendererAPI::API::None: YN_CORE_ASSERT(false, "RendererAPI::None is currently not support!");
+		case RendererAPI::API::OpenGL: return new OpenGLShader(path);
+		}
+
+		YN_CORE_ASSERT(false, "Unknow RendererAPI!");
+		return nullptr;
+	}
+
 	Shader* Shader::Create(const std::string& vertexSrc, const std::string& fragmentSrc)
 	{
 		switch (Renderer::GetAPI())
