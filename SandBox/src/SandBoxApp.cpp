@@ -92,16 +92,16 @@ public:
 				color = vec4(u_Color, 1.0);
 			}
 		)";
+		
+		m_FlatColorShader = Yunni::Shader::Create("VertexPosColor", vertexSource, fragmentSource);
 
-		m_FlatColorShader.reset(Yunni::Shader::Create(vertexSource, fragmentSource));
-
-		m_TextureShader.reset(Yunni::Shader::Create("assets/shaders/Texture.glsl"));
+		const auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Yunni::Texture2D::Create("assets/textures/mps4.png");
 		m_LogoTexture = Yunni::Texture2D::Create("assets/textures/logo.png");
 
-		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Yunni::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Yunni::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Yunni::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Yunni::Timestep ts) override
@@ -147,11 +147,13 @@ public:
 			}
 		}
 
+		const auto textureShader = m_ShaderLibrary.Get("Texture.glsl");
+
 		m_Texture->Bind();
-		Yunni::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Yunni::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		m_LogoTexture->Bind();
-		Yunni::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Yunni::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		//Triangle
 		//Yunni::Renderer::Submit(m_Shader, m_VertexArray);
@@ -171,7 +173,8 @@ public:
 	}
 
 private:
-	Yunni::Ref<Yunni::Shader> m_FlatColorShader, m_TextureShader;
+	Yunni::ShaderLibrary m_ShaderLibrary;
+	Yunni::Ref<Yunni::Shader> m_FlatColorShader;
 	Yunni::Ref<Yunni::VertexArray> m_VertexArray;
 
 	Yunni::Ref<Yunni::VertexArray> m_SquareVA;
