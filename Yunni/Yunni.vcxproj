@@ -165,6 +165,7 @@
     <ClInclude Include="src\Yunni\LayerStack.h" />
     <ClInclude Include="src\Yunni\Log.h" />
     <ClInclude Include="src\Yunni\MouseButtonCodes.h" />
+    <ClInclude Include="src\Yunni\OrthographicCameraController.h" />
     <ClInclude Include="src\Yunni\Renderer\Buffer.h" />
     <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
@@ -609,6 +610,7 @@
     <ClCompile Include="src\Yunni\Layer.cpp" />
     <ClCompile Include="src\Yunni\LayerStack.cpp" />
     <ClCompile Include="src\Yunni\Log.cpp" />
+    <ClCompile Include="src\Yunni\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
