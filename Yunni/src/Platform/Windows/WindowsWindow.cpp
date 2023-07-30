@@ -65,6 +65,7 @@ namespace Yunni {
 				data.Width = width;
 				data.Height = height;
 
+				YN_CORE_WARN("{0}, {1}", width, height);
 				WindowResizeEvent event(width, height);
 				data.EventCallback(event);
 			}

@@ -15,6 +15,11 @@ namespace Yunni {
 		glClearColor(color.r, color.g, color.b, color.a);
 	}
 
+	void OpenGLRendererAPI::SetViewport(int x, int y, uint32_t width, uint32_t height)
+	{
+		glViewport(x, y, width, height);
+	}
+
 	void OpenGLRendererAPI::Clear()
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
