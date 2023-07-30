@@ -2,7 +2,7 @@
 
 #include "ynpch.h"
 
-#include "Yunni/Core.h"
+#include "Yunni/Core/Core.h"
 #include "Yunni/Events/Event.h"
 
 namespace Yunni {

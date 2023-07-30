@@ -1,8 +1,8 @@
 #include "ynpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Yunni/Input.h"
-#include "Yunni/KeyCodes.h"
+#include "Yunni/Core/Input.h"
+#include "Yunni/Core/KeyCodes.h"
 
 namespace Yunni {
 	OrthographicCameraController::OrthographicCameraController(float aspectRatio, bool rotation)

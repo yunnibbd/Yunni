@@ -81,17 +81,38 @@
     <ClInclude Include="src\Yunni.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\Application.h">
-      <Filter>src\Yunni</Filter>
+    <ClInclude Include="src\Yunni\Core\Application.h">
+      <Filter>src\Yunni\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\Core.h">
-      <Filter>src\Yunni</Filter>
+    <ClInclude Include="src\Yunni\Core\Core.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\EntryPoint.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\Input.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\KeyCodes.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\Layer.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\LayerStack.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\Log.h">
+      <Filter>src\Yunni\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Core\MouseButtonCodes.h">
+      <Filter>src\Yunni\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Core\Timestep.h">
       <Filter>src\Yunni\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\EntryPoint.h">
-      <Filter>src\Yunni</Filter>
+    <ClInclude Include="src\Yunni\Core\Window.h">
+      <Filter>src\Yunni\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Events\ApplicationEvent.h">
       <Filter>src\Yunni\Events</Filter>
@@ -108,24 +129,6 @@
     <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h">
       <Filter>src\Yunni\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\Input.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\KeyCodes.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Layer.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\LayerStack.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Log.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\MouseButtonCodes.h">
-      <Filter>src\Yunni</Filter>
-    </ClInclude>
     <ClInclude Include="src\Yunni\Renderer\Buffer.h">
       <Filter>src\Yunni\Renderer</Filter>
     </ClInclude>
@@ -133,6 +136,9 @@
       <Filter>src\Yunni\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Yunni\Renderer\OrthographicCameraController.h">
       <Filter>src\Yunni\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Yunni\Renderer\Renderer.h">
@@ -152,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="src\Yunni\Renderer\VertexArray.h">
       <Filter>src\Yunni\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Yunni\Window.h">
-      <Filter>src\Yunni</Filter>
     </ClInclude>
     <ClInclude Include="src\ynpch.h">
       <Filter>src</Filter>
@@ -1410,7 +1413,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Yunni\OrthographicCameraController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1437,8 +1439,17 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Yunni\Application.cpp">
-      <Filter>src\Yunni</Filter>
+    <ClCompile Include="src\Yunni\Core\Application.cpp">
+      <Filter>src\Yunni\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Core\Layer.cpp">
+      <Filter>src\Yunni\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Core\LayerStack.cpp">
+      <Filter>src\Yunni\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Core\Log.cpp">
+      <Filter>src\Yunni\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\ImGui\ImGuiBuild.cpp">
       <Filter>src\Yunni\ImGui</Filter>
@@ -1446,19 +1457,13 @@
     <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp">
       <Filter>src\Yunni\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Yunni\Layer.cpp">
-      <Filter>src\Yunni</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Yunni\LayerStack.cpp">
-      <Filter>src\Yunni</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Yunni\Log.cpp">
-      <Filter>src\Yunni</Filter>
-    </ClCompile>
     <ClCompile Include="src\Yunni\Renderer\Buffer.cpp">
       <Filter>src\Yunni\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp">
+      <Filter>src\Yunni\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Yunni\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Yunni\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp">
@@ -1485,6 +1490,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Yunni\OrthographicCameraController.cpp" />
   </ItemGroup>
 </Project>

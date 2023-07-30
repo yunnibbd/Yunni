@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Yunni/Log.h"
+#include "Yunni/Core/Log.h"
 
 #ifdef YN_PLATFORM_WINDOWS
 	#include <windows.h>

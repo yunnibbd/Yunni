@@ -1,5 +1,5 @@
 #include "ynpch.h"
-#include "Yunni/Log.h"
+#include "Yunni/Core/Log.h"
 #include "WindowsWindow.h"
 
 #include "Yunni/Events/KeyEvent.h"

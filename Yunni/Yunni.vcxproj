@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -19,27 +19,26 @@
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Yunni</RootNamespace>
-    <LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -150,32 +149,32 @@
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Yunni.h" />
-    <ClInclude Include="src\Yunni\Application.h" />
-    <ClInclude Include="src\Yunni\Core.h" />
+    <ClInclude Include="src\Yunni\Core\Application.h" />
+    <ClInclude Include="src\Yunni\Core\Core.h" />
+    <ClInclude Include="src\Yunni\Core\EntryPoint.h" />
+    <ClInclude Include="src\Yunni\Core\Input.h" />
+    <ClInclude Include="src\Yunni\Core\KeyCodes.h" />
+    <ClInclude Include="src\Yunni\Core\Layer.h" />
+    <ClInclude Include="src\Yunni\Core\LayerStack.h" />
+    <ClInclude Include="src\Yunni\Core\Log.h" />
+    <ClInclude Include="src\Yunni\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Yunni\Core\Timestep.h" />
-    <ClInclude Include="src\Yunni\EntryPoint.h" />
+    <ClInclude Include="src\Yunni\Core\Window.h" />
     <ClInclude Include="src\Yunni\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Yunni\Events\Event.h" />
     <ClInclude Include="src\Yunni\Events\KeyEvent.h" />
     <ClInclude Include="src\Yunni\Events\MouseEvent.h" />
     <ClInclude Include="src\Yunni\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Yunni\Input.h" />
-    <ClInclude Include="src\Yunni\KeyCodes.h" />
-    <ClInclude Include="src\Yunni\Layer.h" />
-    <ClInclude Include="src\Yunni\LayerStack.h" />
-    <ClInclude Include="src\Yunni\Log.h" />
-    <ClInclude Include="src\Yunni\MouseButtonCodes.h" />
-    <ClInclude Include="src\Yunni\OrthographicCameraController.h" />
     <ClInclude Include="src\Yunni\Renderer\Buffer.h" />
     <ClInclude Include="src\Yunni\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Yunni\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererCommand.h" />
     <ClInclude Include="src\Yunni\Renderer\Shader.h" />
     <ClInclude Include="src\Yunni\Renderer\Texture.h" />
     <ClInclude Include="src\Yunni\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Yunni\Window.h" />
     <ClInclude Include="src\ynpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -604,15 +603,15 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Yunni\Application.cpp" />
+    <ClCompile Include="src\Yunni\Core\Application.cpp" />
+    <ClCompile Include="src\Yunni\Core\Layer.cpp" />
+    <ClCompile Include="src\Yunni\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Yunni\Core\Log.cpp" />
     <ClCompile Include="src\Yunni\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Yunni\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Yunni\Layer.cpp" />
-    <ClCompile Include="src\Yunni\LayerStack.cpp" />
-    <ClCompile Include="src\Yunni\Log.cpp" />
-    <ClCompile Include="src\Yunni\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererCommand.cpp" />

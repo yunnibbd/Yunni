@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Yunni/Window.h"
+#include "Yunni/Core/Window.h"
 #include "Yunni/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

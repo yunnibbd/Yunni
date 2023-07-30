@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Yunni/Core.h"
+#include "Yunni/Core/Core.h"
 
 namespace Yunni {
 	class Texture

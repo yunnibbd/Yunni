@@ -1,6 +1,6 @@
 #include "ynpch.h"
 #include "Application.h"
-#include "Yunni/Log.h"
+#include "Yunni/Core/Log.h"
 
 #include <glad/glad.h>
 #include "Yunni/Renderer/Renderer.h"

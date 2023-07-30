@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Yunni/Input.h"
+#include "Yunni/Core/Input.h"
 
 namespace Yunni {
 	class WindowsInput : public Input

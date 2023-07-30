@@ -1,7 +1,7 @@
 #include "ynpch.h"
 #include "WindowsInput.h"
 
-#include "Yunni/Application.h"
+#include "Yunni/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Yunni {

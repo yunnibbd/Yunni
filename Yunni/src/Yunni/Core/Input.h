@@ -1,5 +1,5 @@
 #pragma once
-#include "Yunni/Core.h"
+#include "Yunni/Core/Core.h"
 
 namespace Yunni {
 	class YUNNI_API Input

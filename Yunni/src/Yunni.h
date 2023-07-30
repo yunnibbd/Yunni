@@ -2,17 +2,17 @@
 
 //For use by Yunni application
 
-#include "Yunni/Application.h"
-#include "Yunni/Layer.h"
-#include "Yunni/Log.h"
+#include "Yunni/Core/Application.h"
+#include "Yunni/Core/Layer.h"
+#include "Yunni/Core/Log.h"
 
 #include "Yunni/Core/Timestep.h"
 
-#include "Yunni/Input.h"
-#include "Yunni/KeyCodes.h"
-#include "Yunni/MouseButtonCodes.h"
+#include "Yunni/Core/Input.h"
+#include "Yunni/Core/KeyCodes.h"
+#include "Yunni/Core/MouseButtonCodes.h"
 
-#include "Yunni/OrthographicCameraController.h"
+#include "Yunni/Renderer/OrthographicCameraController.h"
 
 #include "Yunni/ImGui/ImGuiLayer.h"
 
@@ -29,5 +29,5 @@
 //------------------------------------------
 
 //---Entry Point----------------------------
-#include "Yunni/EntryPoint.h"
+#include "Yunni/Core/EntryPoint.h"
 //------------------------------------------
