@@ -11,7 +11,7 @@
 
 namespace Yunni {
 
-	class YUNNI_API Log
+	class Log
 	{
 	public:
 		static void Init();

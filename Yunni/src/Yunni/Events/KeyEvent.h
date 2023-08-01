@@ -4,7 +4,7 @@
 
 namespace Yunni {
 
-	class YUNNI_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 
@@ -18,7 +18,7 @@ namespace Yunni {
 		int m_KeyCode;
 	};
 
-	class YUNNI_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -38,7 +38,7 @@ namespace Yunni {
 		int m_RepeatCount;
 	};
 
-	class YUNNI_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)
@@ -54,7 +54,7 @@ namespace Yunni {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class YUNNI_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)

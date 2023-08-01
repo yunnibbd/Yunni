@@ -7,7 +7,7 @@
 
 namespace Yunni {
 
-	class YUNNI_API LayerStack
+	class LayerStack
 	{
 	public:
 		LayerStack();

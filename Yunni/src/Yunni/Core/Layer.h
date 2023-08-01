@@ -5,7 +5,7 @@
 #include "Yunni/Events/Event.h"
 
 namespace Yunni {
-	class YUNNI_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");

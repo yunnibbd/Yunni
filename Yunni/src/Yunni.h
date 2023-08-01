@@ -27,7 +27,3 @@
 
 #include "Yunni/Renderer/OrthographicCamera.h"
 //------------------------------------------
-
-//---Entry Point----------------------------
-#include "Yunni/Core/EntryPoint.h"
-//------------------------------------------

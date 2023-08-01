@@ -2,26 +2,53 @@
 
 #include <memory>
 
-#ifdef YN_PLATFORM_WINDOWS
-#if YN_DYNAMIC_LINK
-	#ifdef YUNNI_BUILD_DLL
-		#define YUNNI_API __declspec(dllexport)
+// Platform detection using predefined macros
+#ifdef _WIN32
+	/* Windows x64/x86 */
+	#ifdef _WIN64
+		/* Windows x64  */
+		#define YN_PLATFORM_WINDOWS
 	#else
-		#define YUNNI_API __declspec(dllimport)
+		/* Windows x86 */
+		#error "x86 Builds are not supported!"
 	#endif
+#elif defined(__APPLE__) || defined(__MACH__)
+	#include <TargetConditionals.h>
+	/* TARGET_OS_MAC exists on all the platforms
+	 * so we must check all of them (in this order)
+	 * to ensure that we're running on MAC
+	 * and not some other Apple platform */
+	#if TARGET_IPHONE_SIMULATOR == 1
+		#error "IOS simulator is not supported!"
+	#elif TARGET_OS_IPHONE == 1
+		#define YN_PLATFORM_IOS
+		#error "IOS is not supported!"
+	#elif TARGET_OS_MAC == 1
+		#define YN_PLATFORM_MACOS
+		#error "MacOS is not supported!"
+	#else
+		#error "Unknown Apple platform!"
+	#endif
+/* We also have to check __ANDROID__ before __linux__
+ * since android is based on the linux kernel
+ * it has __linux__ defined */
+#elif defined(__ANDROID__)
+	#define YN_PLATFORM_ANDROID
+	#error "Android is not supported!"
+#elif defined(__linux__)
+	#define YN_PLATFORM_LINUX
+	#error "Linux is not supported!"
 #else
-	#define YUNNI_API
-#endif
-#else
-	#error Yunni only supports Windows!
-#endif
+	/* Unknown compiler/platform */
+	#error "Unknown platform!"
+#endif // End of platform detection
 
 #ifdef YN_DEBUG
 	#define YN_ENABLE_ASSERTS
 #endif
 
 #ifdef YN_ENABLE_ASSERTS
-	#define YN_ASSERT(x, ...) { if(!(x)) {YN_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define YN_ASSERT(x, ...) { if(!(x)) { YN_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define YN_CORE_ASSERT(x, ...) { if(!(x)) { YN_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define YN_ASSERT(x, ...)

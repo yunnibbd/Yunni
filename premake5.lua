@@ -76,7 +76,6 @@ project "Yunni"
 		defines
 		{
 			"YUNNI_BUILD_DLL",
-			"YN_PLATFORM_WINDOWS",
 			"GLFW_INCLUDE_NONE",
 		}
 
@@ -129,7 +128,7 @@ project "Sandbox"
 
 		defines
 		{
-			"YN_PLATFORM_WINDOWS"
+			
 		}
 
 	filter "configurations:Debug"
