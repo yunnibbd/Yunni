@@ -18,6 +18,7 @@
 
 //---Renderer-------------------------------
 #include "Yunni/Renderer/Renderer.h"
+#include "Yunni/Renderer/Renderer2D.h"
 #include "Yunni/Renderer/RendererCommand.h"
 
 #include "Yunni/Renderer/Buffer.h"

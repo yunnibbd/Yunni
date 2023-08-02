@@ -170,6 +170,7 @@
     <ClInclude Include="src\Yunni\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Yunni\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Yunni\Renderer\Renderer.h" />
+    <ClInclude Include="src\Yunni\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Yunni\Renderer\RendererCommand.h" />
     <ClInclude Include="src\Yunni\Renderer\Shader.h" />
@@ -613,6 +614,7 @@
     <ClCompile Include="src\Yunni\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Yunni\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Yunni\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Yunni\Renderer\RendererCommand.cpp" />
     <ClCompile Include="src\Yunni\Renderer\Shader.cpp" />
