@@ -14,6 +14,7 @@
 #include <unordered_set>
 
 #include "Yunni/Core/Log.h"
+#include "Yunni/Debug/Instrumentor.h"
 
 #ifdef YN_PLATFORM_WINDOWS
 	#include <windows.h>

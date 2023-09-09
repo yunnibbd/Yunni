@@ -160,6 +160,7 @@
     <ClInclude Include="src\Yunni\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Yunni\Core\Timestep.h" />
     <ClInclude Include="src\Yunni\Core\Window.h" />
+    <ClInclude Include="src\Yunni\Debug\Instrumentor.h" />
     <ClInclude Include="src\Yunni\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Yunni\Events\Event.h" />
     <ClInclude Include="src\Yunni\Events\KeyEvent.h" />
